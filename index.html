@@ -1,102 +1,136 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="fi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Меню ресторана</title>
+    <title>Ravintolan Menu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-            text-align: center;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
             padding: 20px;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
+            background-color: #f8f8f8;
             color: #333;
         }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
         .category {
-            margin-top: 20px;
+            margin-bottom: 30px;
         }
         .item {
-            padding: 10px;
+            margin-bottom: 15px;
             border-bottom: 1px solid #ddd;
-        }
-        .item:last-child {
-            border-bottom: none;
+            padding-bottom: 10px;
         }
         .item h3 {
             margin: 0;
-            color: #444;
+            font-size: 18px;
         }
-        .item p {
-            margin: 5px 0;
-            color: #666;
+        .price {
+            font-weight: bold;
+            color: #d32f2f;
         }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h1>Меню ресторана</h1>
+    <div class="container">
+        <h1>Ravintolan Menu</h1>
 
-    <div class="category">
-        <h2>Закуски</h2>
-        <div class="item">
-            <h3>Салат Цезарь</h3>
-            <p>Курица, листья салата, соус Цезарь</p>
+        <!-- Alkuruoat -->
+        <div class="category">
+            <h2>Alkuun</h2>
+            <div class="item">
+                <h3>Oluistupint basket (6 kpl) <span class="price">7,00€</span></h3>
+                <p>Paistettuja sipulirenkaita ja kastiketta.</p>
+            </div>
+            <div class="item">
+                <h3>Jalopeno poppers (6 kpl) <span class="price">9,40€</span></h3>
+                <p>Juustotäytteisiä jalopenoja.</p>
+            </div>
+            <div class="item">
+                <h3>Chili juustotikut (6 kpl) <span class="price">9,40€</span></h3>
+                <p>Chilitikut juustotäytteellä.</p>
+            </div>
         </div>
-        <div class="item">
-            <h3>Брускетта с томатами</h3>
-            <p>Хрустящий хлеб, помидоры, базилик</p>
+
+        <!-- Burgerit -->
+        <div class="category">
+            <h2>Burgerit</h2>
+            <div class="item">
+                <h3>Hotti Burgeri <span class="price">20,60€</span></h3>
+                <p>Tulisella majoneesilla, chilillä ja hampurilaispihvillä.</p>
+            </div>
+            <div class="item">
+                <h3>Kasvisburgeri <span class="price">20,60€</span></h3>
+                <p>Kasvispihvi, majoneesi, salaatti, tomaatti ja ranskalaiset.</p>
+            </div>
         </div>
+
+        <!-- Combos -->
+        <div class="category">
+            <h2>Combot</h2>
+            <div class="item">
+                <h3>Southwestern <span class="price">17,40€</span></h3>
+                <p>Pariloitu kananrinta, sipulit, paprikat, jalopenot ja juusto.</p>
+            </div>
+            <div class="item">
+                <h3>Vegaansetit <span class="price">17,40€</span></h3>
+                <p>Kasvispihvi, salaatti, majoneesi ja valitsemasi dippi.</p>
+            </div>
+        </div>
+
+        <!-- Lasten Menu -->
+        <div class="category">
+            <h2>Lasten Menu</h2>
+            <div class="item">
+                <h3>Lasten Burgeri <span class="price">11,20€</span></h3>
+                <p>Pieni hampurilainen ja ranskalaiset.</p>
+            </div>
+            <div class="item">
+                <h3>Lasten Siivet <span class="price">12,20€</span></h3>
+                <p>Pieni annos siipiä ja porkkanatikkuja.</p>
+            </div>
+        </div>
+
+        <!-- Kastikkeet -->
+        <div class="category">
+            <h2>Kastikkeet</h2>
+            <div class="item">
+                <h3>Valkosipuli Medium <span class="price">+1,20€</span></h3>
+            </div>
+            <div class="item">
+                <h3>Buffalo <span class="price">+1,00€</span></h3>
+            </div>
+            <div class="item">
+                <h3>Suicide <span class="price">+2,00€</span></h3>
+            </div>
+        </div>
+
+        <!-- Ribsit -->
+        <div class="category">
+            <h2>Ribsit</h2>
+            <div class="item">
+                <h3>Kokonainen <span class="price">25,80€</span></h3>
+                <p>BBQ-maustettu, tarjoillaan coleslawin kera.</p>
+            </div>
+            <div class="item">
+                <h3>Puolikas <span class="price">19,80€</span></h3>
+                <p>Pienempi annos samaa herkullista ribsiä.</p>
+            </div>
+        </div>
+
     </div>
-
-    <div class="category">
-        <h2>Основные блюда</h2>
-        <div class="item">
-            <h3>Стейк Рибай</h3>
-            <p>Говядина, специи, соус</p>
-        </div>
-        <div class="item">
-            <h3>Паста Карбонара</h3>
-            <p>Спагетти, бекон, сливочный соус</p>
-        </div>
-    </div>
-
-    <div class="category">
-        <h2>Десерты</h2>
-        <div class="item">
-            <h3>Тирамису</h3>
-            <p>Кофе, маскарпоне, какао</p>
-        </div>
-        <div class="item">
-            <h3>Чизкейк Нью-Йорк</h3>
-            <p>Классический чизкейк</p>
-        </div>
-    </div>
-
-    <div class="category">
-        <h2>Напитки</h2>
-        <div class="item">
-            <h3>Кофе</h3>
-            <p>Эспрессо, американо, капучино</p>
-        </div>
-        <div class="item">
-            <h3>Лимонад</h3>
-            <p>Лимон, мята, газированная вода</p>
-        </div>
-    </div>
-
-</div>
 
 </body>
 </html>
+
