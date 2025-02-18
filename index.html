@@ -7,130 +7,104 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
             margin: 0;
             padding: 20px;
-            background-color: #f8f8f8;
-            color: #333;
         }
-        .container {
+        .menu-container {
             max-width: 800px;
             margin: 0 auto;
-            background: white;
+            background-color: white;
             padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
+        h2 {
             text-align: center;
+            font-family: 'Georgia', serif;
         }
-        .category {
-            margin-bottom: 30px;
+        .menu-section {
+            margin-bottom: 20px;
         }
-        .item {
-            margin-bottom: 15px;
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
             border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
+            padding: 10px 0;
         }
-        .item h3 {
-            margin: 0;
-            font-size: 18px;
+        .menu-item:last-child {
+            border-bottom: none;
         }
         .price {
             font-weight: bold;
-            color: #d32f2f;
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Ravintolan Menu</h1>
+    <div class="menu-container">
+        <h2>Alkuun</h2>
+        <p><i>Annos sisältää valitsemasi dipin.</i></p>
 
-        <!-- Alkuruoat -->
-        <div class="category">
-            <h2>Alkuun</h2>
-            <div class="item">
-                <h3>Oluistupint basket (6 kpl) <span class="price">7,00€</span></h3>
-                <p>Paistettuja sipulirenkaita ja kastiketta.</p>
+        <div class="menu-section">
+            <div class="menu-item">
+                <span>Olutsipulirenkaat 8kpl (L)</span>
+                <span class="price">7,60 €</span>
             </div>
-            <div class="item">
-                <h3>Jalopeno poppers (6 kpl) <span class="price">9,40€</span></h3>
-                <p>Juustotäytteisiä jalopenoja.</p>
+            <div class="menu-item">
+                <span>Jalapeno poppers 6kpl</span>
+                <span class="price">9,40 €</span>
             </div>
-            <div class="item">
-                <h3>Chili juustotikut (6 kpl) <span class="price">9,40€</span></h3>
-                <p>Chilitikut juustotäytteellä.</p>
+            <div class="menu-item">
+                <span>Mozzarellajuustotikut 6kpl</span>
+                <span class="price">9,40 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Halloumitikut 6kpl (G/L)</span>
+                <span class="price">9,40 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Chilijuustot 8kpl</span>
+                <span class="price">9,40 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Vegaaninen chilijuusto 8kpl (Ve/L)</span>
+                <span class="price">9,40 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Paneroidut herkkusienet 8kpl (G/L)</span>
+                <span class="price">9,40 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Broilerin sisäfile 2kpl (G/L)</span>
+                <span class="price">6,90 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Juustoranut (G)</span>
+                <span class="price">10,90 €</span>
+            </div>
+            <p><i>(rapeita ranskalaisia, pekonia, tuoretta chiliä ja cheddarjuustoa)</i></p>
+            <div class="menu-item">
+                <span>Ristikko perunat (G/L)</span>
+                <span class="price">7,70 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Kierreperunat (G/L)</span>
+                <span class="price">7,70 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Ranskalaiset (G/L)</span>
+                <span class="price">7,70 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Bataattiranskalaiset (G/L)</span>
+                <span class="price">9,10 €</span>
+            </div>
+            <div class="menu-item">
+                <span>Dippivihannekset (G/L/Ve)</span>
+                <span class="price">6,90 €</span>
             </div>
         </div>
-
-        <!-- Burgerit -->
-        <div class="category">
-            <h2>Burgerit</h2>
-            <div class="item">
-                <h3>Hotti Burgeri <span class="price">20,60€</span></h3>
-                <p>Tulisella majoneesilla, chilillä ja hampurilaispihvillä.</p>
-            </div>
-            <div class="item">
-                <h3>Kasvisburgeri <span class="price">20,60€</span></h3>
-                <p>Kasvispihvi, majoneesi, salaatti, tomaatti ja ranskalaiset.</p>
-            </div>
-        </div>
-
-        <!-- Combos -->
-        <div class="category">
-            <h2>Combot</h2>
-            <div class="item">
-                <h3>Southwestern <span class="price">17,40€</span></h3>
-                <p>Pariloitu kananrinta, sipulit, paprikat, jalopenot ja juusto.</p>
-            </div>
-            <div class="item">
-                <h3>Vegaansetit <span class="price">17,40€</span></h3>
-                <p>Kasvispihvi, salaatti, majoneesi ja valitsemasi dippi.</p>
-            </div>
-        </div>
-
-        <!-- Lasten Menu -->
-        <div class="category">
-            <h2>Lasten Menu</h2>
-            <div class="item">
-                <h3>Lasten Burgeri <span class="price">11,20€</span></h3>
-                <p>Pieni hampurilainen ja ranskalaiset.</p>
-            </div>
-            <div class="item">
-                <h3>Lasten Siivet <span class="price">12,20€</span></h3>
-                <p>Pieni annos siipiä ja porkkanatikkuja.</p>
-            </div>
-        </div>
-
-        <!-- Kastikkeet -->
-        <div class="category">
-            <h2>Kastikkeet</h2>
-            <div class="item">
-                <h3>Valkosipuli Medium <span class="price">+1,20€</span></h3>
-            </div>
-            <div class="item">
-                <h3>Buffalo <span class="price">+1,00€</span></h3>
-            </div>
-            <div class="item">
-                <h3>Suicide <span class="price">+2,00€</span></h3>
-            </div>
-        </div>
-
-        <!-- Ribsit -->
-        <div class="category">
-            <h2>Ribsit</h2>
-            <div class="item">
-                <h3>Kokonainen <span class="price">25,80€</span></h3>
-                <p>BBQ-maustettu, tarjoillaan coleslawin kera.</p>
-            </div>
-            <div class="item">
-                <h3>Puolikas <span class="price">19,80€</span></h3>
-                <p>Pienempi annos samaa herkullista ribsiä.</p>
-            </div>
-        </div>
-
     </div>
 
 </body>
 </html>
-
