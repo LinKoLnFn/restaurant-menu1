@@ -4,122 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravintolan Menu</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f8f8f8;
-        }
-        .menu-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .menu-section {
-            width: 100%;
-            max-width: 600px;
-            background: white;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-        }
-        .menu-section h2 {
-            margin: 0;
-            padding: 10px;
-            background: #333;
-            color: white;
-            border-radius: 5px;
-            text-align: center;
-        }
-        .menu-items {
-            display: none;
-            padding: 10px;
-        }
-        .menu-item {
-            margin-bottom: 10px;
-            padding: 10px;
-            background: #f4f4f4;
-            border-radius: 5px;
-        }
-        .menu-item h3 {
-            margin: 0;
-            font-size: 18px;
-            cursor: pointer;
-        }
-        .menu-item p {
-            margin: 5px 0 0;
-            display: none;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="menu-container">
+        <aside class="menu-sidebar">
+            <h2>Menu</h2>
+            <ul>
+                <li onclick="showCategory('alkuun')">Alkuun</li>
+                <li onclick="showCategory('combot')">Combot</li>
+                <li onclick="showCategory('burgerit')">Burgerit</li>
+                <li onclick="showCategory('siivet')">Siivet</li>
+                <li onclick="showCategory('ribsit')">Ribsit</li>
+                <li onclick="showCategory('dipit')">Dipit</li>
+                <li onclick="showCategory('lastenmenu')">Lasten Menu</li>
+            </ul>
+        </aside>
 
-<div class="menu-container">
-    
-    <!-- Alkuun Section -->
-    <div class="menu-section" onclick="toggleMenu('alkuun-items')">
-        <h2>Alkuun</h2>
-        <div id="alkuun-items" class="menu-items">
-            <div class="menu-item">
-                <h3 onclick="toggleDescription(event, this)">Olutsipulirenkaat 8kpl - 7,60€</h3>
-                <p>Annos sisältää valitsemasi dipin.</p>
-            </div>
-            <div class="menu-item">
-                <h3 onclick="toggleDescription(event, this)">Jalapeno poppers 6kpl - 9,40€</h3>
-                <p>Annos sisältää valitsemasi dipin.</p>
-            </div>
-            <div class="menu-item">
-                <h3 onclick="toggleDescription(event, this)">Mozzarellajuustotikut 6kpl - 9,40€</h3>
-                <p>Annos sisältää valitsemasi dipin.</p>
-            </div>
-        </div>
+        <main class="menu-content">
+            <section id="alkuun" class="menu-category">
+                <h2>Alkuun</h2>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <h3>Olutsipulirenkaat 8kpl (L) - 7,60 €</h3>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <h3>Jalapeno poppers 6kpl - 9,40 €</h3>
+                </div>
+                <!-- Добавь остальные блюда Alkuun сюда -->
+            </section>
+
+            <section id="combot" class="menu-category">
+                <h2>Combot</h2>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <h3>SOUTHWESTERN - 17,40 €</h3>
+                    <p class="description">Paneroituja broilerin sisäfileitä, mozzarellajuustotikkuja...</p>
+                </div>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <h3>VEGAANISETTI - 17,40 €</h3>
+                    <p class="description">Paneroituja herkkusieniä, vege poppersseja...</p>
+                </div>
+                <!-- Добавь остальные блюда Combot сюда -->
+            </section>
+
+            <section id="burgerit" class="menu-category">
+                <h2>Burgerit</h2>
+                <div class="menu-item" onclick="toggleDescription(this)">
+                    <h3>HOTTI BURGERI - 20,60 €</h3>
+                    <p class="description">Tulisella kastikkeella marinoitu hampurilaispihvi...</p>
+                </div>
+                <!-- Добавь остальные бургеры -->
+            </section>
+        </main>
     </div>
-
-    <!-- Combot Section -->
-    <div class="menu-section" onclick="toggleMenu('combot-items')">
-        <h2>Combot</h2>
-        <div id="combot-items" class="menu-items">
-            <div class="menu-item">
-                <h3 onclick="toggleDescription(event, this)">Southwestern - 17,40€</h3>
-                <p>Paneroituja broilerin sisäfileitä, mozzarellajuustotikkuja, jalapeno popperseja sekä olutmauroituja sipulirenkaita.</p>
-            </div>
-            <div class="menu-item">
-                <h3 onclick="toggleDescription(event, this)">VEGAANISETTI (ve) - 17,40€</h3>
-                <p>Paneroituja herkkusieniä, veg pippereseja, vegaanisia chilijuustoja.</p>
-            </div>
-            <div class="menu-item">
-                <h3 onclick="toggleDescription(event, this)">HOOK PLATE - 31,90€</h3>
-                <p>Herkullisia paneroituja broilerin sisäfileitä, chilijuustoja, mozzarellajuustotikkuja, jalapeno popperseja.</p>
-            </div>
-        </div>
-    </div>
-
-</div>
-
-<script>
-    function toggleMenu(id) {
-        let section = document.getElementById(id);
-        if (section.style.display === "block") {
-            section.style.display = "none";
-        } else {
-            section.style.display = "block";
-        }
-    }
-
-    function toggleDescription(event, element) {
-        event.stopPropagation();  // Останавливает закрытие секции при клике
-
-        let paragraphs = document.querySelectorAll('.menu-item p');
-        paragraphs.forEach(p => p.style.display = 'none');
-
-        let description = element.nextElementSibling;
-        description.style.display = description.style.display === 'block' ? 'none' : 'block';
-    }
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
