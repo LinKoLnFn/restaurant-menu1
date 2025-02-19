@@ -4,51 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravintolan Menu</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+        .menu-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .menu-section {
+            width: 100%;
+            max-width: 600px;
+            background: white;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+        .menu-section h2 {
+            margin: 0;
+            padding: 10px;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .menu-items {
+            display: none;
+            padding: 10px;
+        }
+        .menu-item {
+            margin-bottom: 10px;
+            padding: 10px;
+            background: #f4f4f4;
+            border-radius: 5px;
+        }
+        .menu-item h3 {
+            margin: 0;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .menu-item p {
+            margin: 5px 0 0;
+            display: none;
+        }
+    </style>
 </head>
 <body>
 
-    <div class="menu-container">
-        <aside class="menu-sidebar">
-            <ul>
-                <li><a href="#" class="menu-link" data-category="alkuun">Alkuun</a></li>
-                <li><a href="#" class="menu-link" data-category="combot">Combot</a></li>
-            </ul>
-        </aside>
-
-        <main class="menu-content">
-            <section id="alkuun" class="menu-section">
-                <h2>Alkuun</h2>
-                <div class="menu-item">
-                    <div class="menu-title" onclick="toggleDescription(this)">Olutsipulirenkaat 8kpl (L) - 7,60€</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title" onclick="toggleDescription(this)">Jalapeno poppers 6kpl - 9,40€</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title" onclick="toggleDescription(this)">Mozzarellajuustotikut 6kpl - 9,40€</div>
-                </div>
-            </section>
-
-            <section id="combot" class="menu-section">
-                <h2>Combot</h2>
-                <div class="menu-item">
-                    <div class="menu-title" onclick="toggleDescription(this)">SOUTHWESTERN - 17,40€</div>
-                    <div class="menu-description">Paneroituja broilerin sisäfileitä, mozzarellajuustotikkuja...</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title" onclick="toggleDescription(this)">VEGAANISETTI (Ve) - 17,40€</div>
-                    <div class="menu-description">Paneroituja herkkusieniä, vege popperseja, vegaanisia...</div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-title" onclick="toggleDescription(this)">HOOK PLATE - 31,90€</div>
-                    <div class="menu-description">Isompaan nälkään! Herkullisia paneroituja broilerin...</div>
-                </div>
-            </section>
-        </main>
+<div class="menu-container">
+    
+    <!-- Alkuun Section -->
+    <div class="menu-section" onclick="toggleMenu('alkuun-items')">
+        <h2>Alkuun</h2>
+        <div id="alkuun-items" class="menu-items">
+            <div class="menu-item">
+                <h3 onclick="toggleDescription(this)">Olutsipulirenkaat 8kpl - 7,60€</h3>
+                <p>Annos sisältää valitsemasi dipin.</p>
+            </div>
+            <div class="menu-item">
+                <h3 onclick="toggleDescription(this)">Jalapeno poppers 6kpl - 9,40€</h3>
+                <p>Annos sisältää valitsemasi dipin.</p>
+            </div>
+            <div class="menu-item">
+                <h3 onclick="toggleDescription(this)">Mozzarellajuustotikut 6kpl - 9,40€</h3>
+                <p>Annos sisältää valitsemasi dipin.</p>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Combot Section -->
+    <div class="menu-section" onclick="toggleMenu('combot-items')">
+        <h2>Combot</h2>
+        <div id="combot-items" class="menu-items">
+            <div class="menu-item">
+                <h3 onclick="toggleDescription(this)">Southwestern - 17,40€</h3>
+                <p>Paneroituja broilerin sisäfileitä, mozzarellajuustotikkuja, jalapeno popperseja sekä olutmauroituja sipulirenkaita.</p>
+            </div>
+            <div class="menu-item">
+                <h3 onclick="toggleDescription(this)">VEGAANISETTI (ve) - 17,40€</h3>
+                <p>Paneroituja herkkusieniä, veg pippereseja, vegaanisia chilijuustoja.</p>
+            </div>
+            <div class="menu-item">
+                <h3 onclick="toggleDescription(this)">HOOK PLATE - 31,90€</h3>
+                <p>Herkullisia paneroituja broilerin sisäfileitä, chilijuustoja, mozzarellajuustotikkuja, jalapeno popperseja.</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleMenu(id) {
+        let sections = document.querySelectorAll('.menu-items');
+        sections.forEach(section => {
+            if (section.id === id) {
+                section.style.display = section.style.display === 'block' ? 'none' : 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+
+    function toggleDescription(element) {
+        let paragraphs = document.querySelectorAll('.menu-item p');
+        paragraphs.forEach(p => p.style.display = 'none');
+        let description = element.nextElementSibling;
+        description.style.display = description.style.display === 'block' ? 'none' : 'block';
+    }
+</script>
 
 </body>
 </html>
