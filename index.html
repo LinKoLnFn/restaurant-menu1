@@ -65,15 +65,15 @@
         <h2>Alkuun</h2>
         <div id="alkuun-items" class="menu-items">
             <div class="menu-item">
-                <h3 onclick="toggleDescription(this)">Olutsipulirenkaat 8kpl - 7,60€</h3>
+                <h3 onclick="toggleDescription(event, this)">Olutsipulirenkaat 8kpl - 7,60€</h3>
                 <p>Annos sisältää valitsemasi dipin.</p>
             </div>
             <div class="menu-item">
-                <h3 onclick="toggleDescription(this)">Jalapeno poppers 6kpl - 9,40€</h3>
+                <h3 onclick="toggleDescription(event, this)">Jalapeno poppers 6kpl - 9,40€</h3>
                 <p>Annos sisältää valitsemasi dipin.</p>
             </div>
             <div class="menu-item">
-                <h3 onclick="toggleDescription(this)">Mozzarellajuustotikut 6kpl - 9,40€</h3>
+                <h3 onclick="toggleDescription(event, this)">Mozzarellajuustotikut 6kpl - 9,40€</h3>
                 <p>Annos sisältää valitsemasi dipin.</p>
             </div>
         </div>
@@ -84,15 +84,15 @@
         <h2>Combot</h2>
         <div id="combot-items" class="menu-items">
             <div class="menu-item">
-                <h3 onclick="toggleDescription(this)">Southwestern - 17,40€</h3>
+                <h3 onclick="toggleDescription(event, this)">Southwestern - 17,40€</h3>
                 <p>Paneroituja broilerin sisäfileitä, mozzarellajuustotikkuja, jalapeno popperseja sekä olutmauroituja sipulirenkaita.</p>
             </div>
             <div class="menu-item">
-                <h3 onclick="toggleDescription(this)">VEGAANISETTI (ve) - 17,40€</h3>
+                <h3 onclick="toggleDescription(event, this)">VEGAANISETTI (ve) - 17,40€</h3>
                 <p>Paneroituja herkkusieniä, veg pippereseja, vegaanisia chilijuustoja.</p>
             </div>
             <div class="menu-item">
-                <h3 onclick="toggleDescription(this)">HOOK PLATE - 31,90€</h3>
+                <h3 onclick="toggleDescription(event, this)">HOOK PLATE - 31,90€</h3>
                 <p>Herkullisia paneroituja broilerin sisäfileitä, chilijuustoja, mozzarellajuustotikkuja, jalapeno popperseja.</p>
             </div>
         </div>
@@ -102,19 +102,20 @@
 
 <script>
     function toggleMenu(id) {
-        let sections = document.querySelectorAll('.menu-items');
-        sections.forEach(section => {
-            if (section.id === id) {
-                section.style.display = section.style.display === 'block' ? 'none' : 'block';
-            } else {
-                section.style.display = 'none';
-            }
-        });
+        let section = document.getElementById(id);
+        if (section.style.display === "block") {
+            section.style.display = "none";
+        } else {
+            section.style.display = "block";
+        }
     }
 
-    function toggleDescription(element) {
+    function toggleDescription(event, element) {
+        event.stopPropagation();  // Останавливает закрытие секции при клике
+
         let paragraphs = document.querySelectorAll('.menu-item p');
         paragraphs.forEach(p => p.style.display = 'none');
+
         let description = element.nextElementSibling;
         description.style.display = description.style.display === 'block' ? 'none' : 'block';
     }
