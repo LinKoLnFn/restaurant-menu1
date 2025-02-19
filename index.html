@@ -7,40 +7,48 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Ravintolan Menu</h1>
-    </header>
 
-    <main>
-        <section class="menu-category">
-            <h2>Alkuun</h2>
+    <div class="menu-container">
+        <aside class="menu-sidebar">
             <ul>
-                <li class="menu-item" onclick="toggleDescription('alkuun-1')">Olutsipulirenkaat 8kpl - 7,60€</li>
-                <p id="alkuun-1" class="description">---</p>
-
-                <li class="menu-item" onclick="toggleDescription('alkuun-2')">Jalapeno poppers 6kpl - 9,40€</li>
-                <p id="alkuun-2" class="description">---</p>
-
-                <li class="menu-item" onclick="toggleDescription('alkuun-3')">Mozzarellajuustotikut 6kpl - 9,40€</li>
-                <p id="alkuun-3" class="description">---</p>
+                <li><a href="#" class="menu-link" data-category="alkuun">Alkuun</a></li>
+                <li><a href="#" class="menu-link" data-category="combot">Combot</a></li>
             </ul>
-        </section>
+        </aside>
 
-        <section class="menu-category">
-            <h2>Combot</h2>
-            <ul>
-                <li class="menu-item" onclick="toggleDescription('combo-1')">SOUTHWESTERN - 17,40€</li>
-                <p id="combo-1" class="description">Paneroitua broilerin sisäfilettä, mozzarellajuustotikkuja...</p>
+        <main class="menu-content">
+            <section id="alkuun" class="menu-section">
+                <h2>Alkuun</h2>
+                <div class="menu-item">
+                    <div class="menu-title" onclick="toggleDescription(this)">Olutsipulirenkaat 8kpl (L) - 7,60€</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title" onclick="toggleDescription(this)">Jalapeno poppers 6kpl - 9,40€</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title" onclick="toggleDescription(this)">Mozzarellajuustotikut 6kpl - 9,40€</div>
+                </div>
+            </section>
 
-                <li class="menu-item" onclick="toggleDescription('combo-2')">VEGAANISETTI - 17,40€</li>
-                <p id="combo-2" class="description">Paneroituja herkkusieniä, vege popperseja, vegaanisia chilijuusto...</p>
-
-                <li class="menu-item" onclick="toggleDescription('combo-3')">HOOK PLATE - 31,90€</li>
-                <p id="combo-3" class="description">Isompaan nälkään tai jaettavaksi...</p>
-            </ul>
-        </section>
-    </main>
+            <section id="combot" class="menu-section">
+                <h2>Combot</h2>
+                <div class="menu-item">
+                    <div class="menu-title" onclick="toggleDescription(this)">SOUTHWESTERN - 17,40€</div>
+                    <div class="menu-description">Paneroituja broilerin sisäfileitä, mozzarellajuustotikkuja...</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title" onclick="toggleDescription(this)">VEGAANISETTI (Ve) - 17,40€</div>
+                    <div class="menu-description">Paneroituja herkkusieniä, vege popperseja, vegaanisia...</div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-title" onclick="toggleDescription(this)">HOOK PLATE - 31,90€</div>
+                    <div class="menu-description">Isompaan nälkään! Herkullisia paneroituja broilerin...</div>
+                </div>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
+
 </body>
 </html>
