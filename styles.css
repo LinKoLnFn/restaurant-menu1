@@ -1,47 +1,64 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
-    text-align: center;
+    display: flex;
+    background-color: #f5f5f5;
 }
 
-header {
-    background-color: #222;
+.menu-container {
+    display: flex;
+    width: 100%;
+}
+
+.menu-sidebar {
+    width: 20%;
+    background: #333;
     color: white;
-    padding: 15px;
+    padding: 20px;
+    min-height: 100vh;
 }
 
-.menu-category {
-    background-color: white;
-    margin: 20px auto;
-    padding: 15px;
-    width: 90%;
-    max-width: 600px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-}
-
-h2 {
-    color: #333;
-}
-
-.menu-item {
+.menu-sidebar ul {
     list-style: none;
+    padding: 0;
+}
+
+.menu-sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.menu-sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+}
+
+.menu-content {
+    width: 80%;
+    padding: 20px;
+}
+
+.menu-section {
+    display: none;
+}
+
+.menu-section.active {
+    display: block;
+}
+
+.menu-title {
+    background: #ddd;
     padding: 10px;
     cursor: pointer;
-    background-color: #eee;
-    margin: 5px 0;
-    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
 }
 
-.menu-item:hover {
-    background-color: #ddd;
-}
-
-.description {
+.menu-description {
     display: none;
-    font-size: 14px;
-    color: #555;
-    margin-top: 5px;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
 }
