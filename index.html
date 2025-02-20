@@ -133,7 +133,96 @@
 
         <!-- Combot Menu (Пока пуст) -->
         <div class="menu-category" id="combot" style="display: none;">
-            <p>Combot menu lisätään myöhemmin.</p>
+           <!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ravintola Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" class="tab-link active" data-category="alkuun">Alkuun</a></li>
+            <li><a href="#" class="tab-link" data-category="combot">Combot</a></li>
+        </ul>
+    </nav>
+
+    <div id="menu-container">
+        <!-- Alkuun Menu -->
+        <div class="menu-category" id="alkuun">
+            <!-- Все блюда из Alkuun тут (уже добавлены) -->
+        </div>
+
+        <!-- Combot Menu -->
+        <div class="menu-category" id="combot" style="display: none;">
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">SOUTHWESTERN</span>
+                    <span class="menu-price">17,40€</span>
+                </div>
+                <p class="menu-description">Paneroitu broilerin sisäfileitä, mozzarellajuustotikkuja, jalapeno popperseja sekä olutmarinoituja sipulirenkaita. Annos sisältää myös ristikkoperunoita, raikkaita dippivihanneksia sekä kaksi valitsemaasi dippiä.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">VEGAANISETTI (ve)</span>
+                    <span class="menu-price">17,40€</span>
+                </div>
+                <p class="menu-description">Paneroituja herkkusieniä, vege popperseja, vegaanisia chilijuustoja, ristikkoperunoita, raikkaita kasviksia sekä kaksi valitsemaasi dippiä.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">HOOK PLATE</span>
+                    <span class="menu-price">31,90€</span>
+                </div>
+                <p class="menu-description">Isompaan nälkään tai jaettavaksi. Herkullisia paneroituja broilerin sisäfileitä, chilijuustoja, paneroituja herkkusieniä, mozzarellajuustotikkuja, jalapeno popperseja, olutmarinoituja sipulirenkaita, ristikkoperunoita, raikkaita dippivihanneksia sekä valitsemasi dippiä.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">PARTY PACK (L)</span>
+                    <span class="menu-price">68,90€</span>
+                </div>
+                <p class="menu-description">Kierreperunoita, olutmarinoituja sipulirenkaita, 6q kpl sipsejä, vihanneksia, 8 kpl vapaavalintaista dippiä, 4 kpl sipstickkastiketta.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">HAT-TRICK (L)</span>
+                    <span class="menu-price">35,40€</span>
+                </div>
+                <p class="menu-description">33 kpl sipisiä valitsemallasi kastikkeella, ristikkoperunoita, porkkanaa, kurkkua sekä 2 kpl vapaavalintaista dippiä.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">STEAK’N FRIES</span>
+                    <span class="menu-price">29,90€</span>
+                </div>
+                <p class="menu-description">Hiiligrillissä avotulella paistettu upea 250g entrecote pihvi saa kaverikseen rapeat ranskalaiset, raikasta coleslaw salaattia sekä vapaavalintaisen 1 kpl sipstickkastikkeen.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">LITMASEN KING`S SALAD</span>
+                    <span class="menu-price">14,90€</span>
+                </div>
+                <p class="menu-description">Raikasta jäävuorisalaattia, kurkkua, kirsikkatomaatilla, marinoidulla punasipulilla, pekonimurulla, siemen-pähkinäsekoituksella sekä leivällä. Valitse täytteeksi rapea broilerin sisäfile, grillattu 120g halloumijuusto tai 170g kasvispihvi. Saatavilla myös gluteenittomana sekä ilman pekonia.</p>
+            </div>
+
+            <p class="extra-options">Extra kana, halloumi tai pihvi 120g +6€</p>
+            <p class="extra-options">Vaihtomaksu +2€</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
         </div>
     </div>
 
