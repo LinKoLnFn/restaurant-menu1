@@ -3,76 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravintolan Menu</title>
+    <title>Ravintola Menu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="menu-container">
-        <div class="menu-sidebar">
-            <button class="menu-btn" onclick="openCategory('alkuun')">Alkuun</button>
-            <button class="menu-btn" onclick="openCategory('combot')">Combot</button>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#" class="tab-link active" data-category="alkuun">Alkuun</a></li>
+            <li><a href="#" class="tab-link" data-category="combot">Combot</a></li>
+        </ul>
+    </nav>
+
+    <div id="menu-container">
+        <!-- Alkuun Menu -->
+        <div class="menu-category" id="alkuun">
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">Olutsipulirenkaat 8kpl</span>
+                    <span class="menu-price">7,60€</span>
+                </div>
+                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">Jalapeno poppers 6kpl</span>
+                    <span class="menu-price">9,40€</span>
+                </div>
+                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
+            </div>
+
+            <div class="menu-item">
+                <div class="menu-header" onclick="toggleDescription(this)">
+                    <span class="menu-name">Mozzarellajuustotikut 6kpl</span>
+                    <span class="menu-price">9,40€</span>
+                </div>
+                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
+            </div>
+            
+            <!-- Добавь остальные блюда Alkuun сюда -->
         </div>
 
-        <div class="menu-content">
-            <!-- ALKUUN -->
-            <div id="alkuun" class="menu-category">
-                <h2>Alkuun</h2>
-                <div class="menu-item" onclick="toggleDescription('item1')">
-                    <p class="item-title">Olutsipulirenkaat 8kpl (L) - 7,60€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item2')">
-                    <p class="item-title">Jalapeno poppers 6kpl - 9,40€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item3')">
-                    <p class="item-title">Mozzarellajuustotikut 6kpl - 9,40€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item4')">
-                    <p class="item-title">Halloumitikut 6kpl (G/L) - 9,40€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item5')">
-                    <p class="item-title">Chilijuustot 8kpl - 9,40€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item6')">
-                    <p class="item-title">Vegaaninen chilijuusto 8kpl (Ve/L) - 9,40€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item7')">
-                    <p class="item-title">Paneroidut herkkusienet 8kpl (G/L) - 9,40€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item8')">
-                    <p class="item-title">Broilerin sisäfile 2kpl (G/L) - 6,90€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item9')">
-                    <p class="item-title">Juustoranut (G) - 10,90€</p>
-                    <p class="item-desc">Rapetia ranskalaisia, pekonia, tuoretta chiliä ja cheddarjuustoa.</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item10')">
-                    <p class="item-title">Ristikko perunat (G/L) - 7,70€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item11')">
-                    <p class="item-title">Kierreperunat (G/L) - 7,70€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item12')">
-                    <p class="item-title">Ranskalaiset (G/L) - 7,70€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item13')">
-                    <p class="item-title">Bataattiranskalaiset (G/L) - 9,10€</p>
-                </div>
-                <div class="menu-item" onclick="toggleDescription('item14')">
-                    <p class="item-title">Dippivihannekset (G/L/Ve) - 6,90€</p>
-                </div>
-            </div>
-
-            <!-- COMBOT (ПОКА ПУСТО, СКОРО ДОБАВЛЮ) -->
-            <div id="combot" class="menu-category" style="display:none;">
-                <h2>Combot</h2>
-                <p>Lisätään pian...</p>
-            </div>
-
+        <!-- Combot Menu (Пока пуст) -->
+        <div class="menu-category" id="combot" style="display: none;">
+            <p>Combot menu lisätään myöhemmin.</p>
         </div>
     </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
