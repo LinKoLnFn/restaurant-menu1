@@ -3,193 +3,178 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravintola Menu</title>
+    <title>Ravintolan menu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <h1>Menu</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#" class="tab-link active" data-category="alkuun">Alkuun</a></li>
+                <li><a href="#" class="tab-link" data-category="combot">Combot</a></li>
+            </ul>
+        </nav>
 
-    <nav class="navbar">
-        <ul>
-            <li><a href="#" class="tab-link active" data-category="alkuun">Alkuun</a></li>
-            <li><a href="#" class="tab-link" data-category="combot">Combot</a></li>
-        </ul>
-    </nav>
-
-    <div id="menu-container">
-        <!-- Alkuun Menu -->
-        <div class="menu-category" id="alkuun">
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Olutsipulirenkaat 8kpl</span>
-                    <span class="menu-price">7,60€</span>
+        <div id="menu-container">
+            <!-- Alkuun Menu (все блюда на основе твоего кода и фото) -->
+            <div class="menu-category" id="alkuun">
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Olutsipulirenkaat 8kpl (L)</span>
+                        <span class="item-price">7,60 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
                 </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Jalapeno poppers 6kpl</span>
+                        <span class="item-price">9,40 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Mozzarellajuustotikut 6kpl</span>
+                        <span class="item-price">9,40 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Halloumitikut 6kpl (G)</span>
+                        <span class="item-price">9,40 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Chilijuustot 8kpl</span>
+                        <span class="item-price">9,40 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Vegaaninen chilijuusto 8kpl (Ve/L)</span>
+                        <span class="item-price">9,40 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Paneroidut herkkusienet 8kpl (G/L)</span>
+                        <span class="item-price">9,40 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Broilerin sisäfile 2kpl (L)</span>
+                        <span class="item-price">6,90 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Juustoranut</span>
+                        <span class="item-price">10,90 €</span>
+                    </div>
+                    <p class="item-description">Rapeita ranskalaisia, pekonia, tuoretta chiliä ja cheddarjuustoa.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Ristikkoperunat (L)</span>
+                        <span class="item-price">7,70 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Kierreperunat (G/L)</span>
+                        <span class="item-price">7,70 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Ranskalaiset (G/L)</span>
+                        <span class="item-price">7,70 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Bataattiranskalaiset (G/L)</span>
+                        <span class="item-price">9,10 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Dippivihannekset (G/L/Ve)</span>
+                        <span class="item-price">6,90 €</span>
+                    </div>
+                    <p class="item-description">Annos sisältää valitsemasi dipin.</p>
+                </div>
             </div>
 
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Jalapeno poppers 6kpl</span>
-                    <span class="menu-price">9,40€</span>
+            <!-- Combot Menu (на основе фото) -->
+            <div class="menu-category" id="combot" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">SOUTHWESTERN</span>
+                        <span class="item-price">17,40 €</span>
+                    </div>
+                    <p class="item-description">Paneroitu broilerin sisäfileitä, mozzarellajuustotikkuja, jalapeno popperseja sekä olutmarinoituja sipulirenkaita. Annos sisältää myös ristikkoperunoita, raikkaita dippivihanneksia sekä kaksi valitsemaasi dippiä.</p>
                 </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Mozzarellajuustotikut 6kpl</span>
-                    <span class="menu-price">9,40€</span>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">VEGAANISETTI (Ve)</span>
+                        <span class="item-price">17,40 €</span>
+                    </div>
+                    <p class="item-description">Paneroituja herkkusieniä, vege popperseja, vegaanisia chilijuustoja, ristikkoperunoita, raikkaita kasviksia sekä kaksi valitsemaasi dippiä.</p>
                 </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Halloumitikut 6kpl</span>
-                    <span class="menu-price">9,40€</span>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">HOOK PLATE</span>
+                        <span class="item-price">31,90 €</span>
+                    </div>
+                    <p class="item-description">Isompaan nälkään tai jaettavaksi. Herkullisia paneroituja broilerin sisäfileitä, chilijuustoja, paneroituja herkkusieniä, mozzarellajuustotikkuja, jalapeno popperseja, olutmarinoituja sipulirenkaita, ristikkoperunoita, raikkaita dippivihanneksia sekä valitsemasi dippiä.</p>
                 </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Chilijuustot 8kpl</span>
-                    <span class="menu-price">9,40€</span>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">PARTY PACK (L)</span>
+                        <span class="item-price">68,90 €</span>
+                    </div>
+                    <p class="item-description">Kierreperunoita, olutmarinoituja sipulirenkaita, 6 kpl sippejä, vihanneksia, 8 kpl vapaavalintaista dippiä, 4 kpl sipstickkastiketta.</p>
                 </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Vegaaninen chilijuusto 8kpl</span>
-                    <span class="menu-price">9,40€</span>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">HAT-TRICK (L)</span>
+                        <span class="item-price">35,40 €</span>
+                    </div>
+                    <p class="item-description">33 kpl sippejä valitsemallasi kastikkeella, ristikkoperunoita, porkkanaa, kurkkua sekä 2 kpl vapaavalintaista dippiä.</p>
                 </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Paneroidut herkkusienet 8kpl</span>
-                    <span class="menu-price">9,40€</span>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">STEAK’N FRIES ★ HIILIGRILLISTÄ ★</span>
+                        <span class="item-price">29,90 €</span>
+                    </div>
+                    <p class="item-description">Hiiligrillissä avotulella paistettu upea 250g entrecote pihvi saa kaverikseen rapeat ranskalaiset, raikasta coleslaw salaattia sekä vapaavalintaisen 1 kpl sipstickkastikkeen.</p>
                 </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Broilerin sisäfile 2kpl</span>
-                    <span class="menu-price">6,90€</span>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">LITMASEN KING’S SALAD</span>
+                        <span class="item-price">14,90 €</span>
+                    </div>
+                    <p class="item-description">Raikasta jäävuorisalaattia, kurkkua, kirsikkatomaatilla, marinoidulla punasipulilla, pekonimurulla, siemen-pähkinäsekoituksella sekä leivällä. Valitse täytteeksi rapea broilerin sisäfile, grillattu 120g halloumijuusto tai 170g kasvispihvi. Saatavilla myös gluteenittomana sekä ilman pekonia.</p>
                 </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Juustoranut</span>
-                    <span class="menu-price">10,90€</span>
+                <div class="menu-item extra">
+                    <p class="extra-options">Extra kana, halloumi tai pihvi 120g +6 €</p>
+                    <p class="extra-options">Vaihtomaksu +2 €</p>
                 </div>
-                <p class="menu-description">Rapeita ranskalaisia, pekonia, tuoretta chiliä ja cheddarjuustoa.</p>
             </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Ristikko­perunat</span>
-                    <span class="menu-price">7,70€</span>
-                </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Kierreperunat</span>
-                    <span class="menu-price">7,70€</span>
-                </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Ranskalaiset</span>
-                    <span class="menu-price">7,70€</span>
-                </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Bataatti­ranskikset</span>
-                    <span class="menu-price">7,70€</span>
-                </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">Dippivihannekset</span>
-                    <span class="menu-price">6,90€</span>
-                </div>
-                <p class="menu-description">Annos sisältää valitsemasi dipin.</p>
-            </div>
-        </div>
-
-     <div class="menu-category" id="combot" style="display: none;">
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">SOUTHWESTERN</span>
-                    <span class="menu-price">17,40€</span>
-                </div>
-                <p class="menu-description">Paneroitu broilerin sisäfileitä, mozzarellajuustotikkuja, jalapeno popperseja sekä olutmarinoituja sipulirenkaita. Annos sisältää myös ristikkoperunoita, raikkaita dippivihanneksia sekä kaksi valitsemaasi dippiä.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">VEGAANISETTI (ve)</span>
-                    <span class="menu-price">17,40€</span>
-                </div>
-                <p class="menu-description">Paneroituja herkkusieniä, vege popperseja, vegaanisia chilijuustoja, ristikkoperunoita, raikkaita kasviksia sekä kaksi valitsemaasi dippiä.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">HOOK PLATE</span>
-                    <span class="menu-price">31,90€</span>
-                </div>
-                <p class="menu-description">Isompaan nälkään tai jaettavaksi. Herkullisia paneroituja broilerin sisäfileitä, chilijuustoja, paneroituja herkkusieniä, mozzarellajuustotikkuja, jalapeno popperseja, olutmarinoituja sipulirenkaita, ristikkoperunoita, raikkaita dippivihanneksia sekä valitsemasi dippiä.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">PARTY PACK (L)</span>
-                    <span class="menu-price">68,90€</span>
-                </div>
-                <p class="menu-description">Kierreperunoita, olutmarinoituja sipulirenkaita, 6q kpl sipsejä, vihanneksia, 8 kpl vapaavalintaista dippiä, 4 kpl sipstickkastiketta.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">HAT-TRICK (L)</span>
-                    <span class="menu-price">35,40€</span>
-                </div>
-                <p class="menu-description">33 kpl sipisiä valitsemallasi kastikkeella, ristikkoperunoita, porkkanaa, kurkkua sekä 2 kpl vapaavalintaista dippiä.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">STEAK’N FRIES</span>
-                    <span class="menu-price">29,90€</span>
-                </div>
-                <p class="menu-description">Hiiligrillissä avotulella paistettu upea 250g entrecote pihvi saa kaverikseen rapeat ranskalaiset, raikasta coleslaw salaattia sekä vapaavalintaisen 1 kpl sipstickkastikkeen.</p>
-            </div>
-
-            <div class="menu-item">
-                <div class="menu-header" onclick="toggleDescription(this)">
-                    <span class="menu-name">LITMASEN KING`S SALAD</span>
-                    <span class="menu-price">14,90€</span>
-                </div>
-                <p class="menu-description">Raikasta jäävuorisalaattia, kurkkua, kirsikkatomaatilla, marinoidulla punasipulilla, pekonimurulla, siemen-pähkinäsekoituksella sekä leivällä. Valitse täytteeksi rapea broilerin sisäfile, grillattu 120g halloumijuusto tai 170g kasvispihvi. Saatavilla myös gluteenittomana sekä ilman pekonia.</p>
-            </div>
-
-            <p class="extra-options">Extra kana, halloumi tai pihvi 120g +6€</p>
-            <p class="extra-options">Vaihtomaksu +2€</p>
         </div>
     </div>
 
