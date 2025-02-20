@@ -1,15 +1,14 @@
-function openCategory(category) {
-    document.querySelectorAll('.menu-category').forEach(item => {
-        item.style.display = "none";
-    });
-    document.getElementById(category).style.display = "block";
-}
+document.querySelectorAll(".tab-link").forEach(tab => {
+    tab.addEventListener("click", function() {
+        document.querySelectorAll(".tab-link").forEach(t => t.classList.remove("active"));
+        this.classList.add("active");
 
-function toggleDescription(item) {
-    let desc = document.querySelector(`#${item} .item-desc`);
-    if (desc) {
-        let allDescriptions = document.querySelectorAll('.item-desc');
-        allDescriptions.forEach(d => d.style.display = "none");
-        desc.style.display = desc.style.display === "block" ? "none" : "block";
-    }
+        document.querySelectorAll(".menu-category").forEach(menu => menu.style.display = "none");
+        document.getElementById(this.dataset.category).style.display = "block";
+    });
+});
+
+function toggleDescription(element) {
+    document.querySelectorAll(".menu-description").forEach(desc => desc.style.display = "none");
+    element.nextElementSibling.style.display = "block";
 }
