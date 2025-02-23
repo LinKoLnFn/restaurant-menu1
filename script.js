@@ -1,4 +1,4 @@
-let order = [];
+let order = {};
 
 document.querySelectorAll(".tab-link").forEach(tab => {
     tab.addEventListener("click", function() {
@@ -20,16 +20,33 @@ function toggleDescription(element) {
     }
 }
 
-function addToOrder(itemName, price) {
-    order.push({ name: itemName, price: price });
+function updateQuantity(itemName, price, change) {
+    if (!order[itemName]) {
+        order[itemName] = { quantity: 0, price: price };
+    }
+
+    order[itemName].quantity += change;
+
+    if (order[itemName].quantity < 0) {
+        order[itemName].quantity = 0;
+    }
+
+    if (order[itemName].quantity === 0) {
+        delete order[itemName];
+    }
+
+    document.getElementById(`quantity-${itemName}`).textContent = order[itemName]?.quantity || 0;
     updateCart();
 }
 
 function updateCart() {
-    const total = order.reduce((sum, item) => sum + item.price, 0);
+    let total = 0;
+    for (let item in order) {
+        total += order[item].price * order[item].quantity;
+    }
     const cartIcon = document.getElementById('cart-icon');
     cartIcon.querySelector('#cart-total').textContent = `${total.toFixed(2)} €`;
-    cartIcon.classList.add('visible');
+    cartIcon.classList.toggle('visible', total > 0);
 }
 
 function showOrder() {
@@ -37,11 +54,13 @@ function showOrder() {
     const orderList = document.getElementById('order-list');
     orderList.innerHTML = '';
 
-    order.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.name} - ${item.price.toFixed(2)} €`;
-        orderList.appendChild(li);
-    });
+    for (let item in order) {
+        if (order[item].quantity > 0) {
+            const li = document.createElement('li');
+            li.textContent = `${item} x${order[item].quantity} - ${(order[item].price * order[item].quantity).toFixed(2)} €`;
+            orderList.appendChild(li);
+        }
+    }
 
     modal.style.display = 'block';
 }
