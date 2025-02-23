@@ -20,9 +20,24 @@ function toggleDescription(element) {
     }
 }
 
-function updateQuantity(itemName, price, change) {
+function addFirstItem(itemName, price) {
     if (!order[itemName]) {
         order[itemName] = { quantity: 0, price: price };
+    }
+
+    order[itemName].quantity = 1; // Устанавливаем количество 1 при первом добавлении
+    updateQuantityDisplay(itemName);
+    updateCart();
+
+    // Скрываем кнопку "+Lisää" и показываем контролы количества
+    const item = document.querySelector(`.menu-item .add-btn[onclick="addFirstItem('${itemName}', ${price})"]`).parentElement;
+    item.querySelector('.add-btn').classList.add('hidden');
+    item.querySelector('.quantity-controls').classList.add('visible');
+}
+
+function updateQuantity(itemName, change) {
+    if (!order[itemName]) {
+        order[itemName] = { quantity: 0, price: order[itemName]?.price || 0 };
     }
 
     order[itemName].quantity += change;
@@ -33,10 +48,21 @@ function updateQuantity(itemName, price, change) {
 
     if (order[itemName].quantity === 0) {
         delete order[itemName];
+        // Возвращаем кнопку "+Lisää" и скрываем контролы количества
+        const item = document.querySelector(`#quantity-${itemName}`).parentElement.parentElement;
+        item.querySelector('.add-btn').classList.remove('hidden');
+        item.querySelector('.quantity-controls').classList.remove('visible');
     }
 
-    document.getElementById(`quantity-${itemName}`).textContent = order[itemName]?.quantity || 0;
+    updateQuantityDisplay(itemName);
     updateCart();
+}
+
+function updateQuantityDisplay(itemName) {
+    const quantityElement = document.getElementById(`quantity-${itemName}`);
+    if (quantityElement) {
+        quantityElement.textContent = order[itemName]?.quantity || 0;
+    }
 }
 
 function updateCart() {
