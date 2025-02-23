@@ -42,7 +42,7 @@ function updateQuantity(itemName, change) {
 
     order[itemName].quantity += change;
 
-    if (order[itemName].quantity < 0) {
+    if (order[itemName].quantity < 1) {
         order[itemName].quantity = 0;
     }
 
