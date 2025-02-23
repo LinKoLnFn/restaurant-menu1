@@ -30,14 +30,16 @@ function addFirstItem(itemName, price) {
     updateCart();
 
     // Скрываем кнопку "+Lisää" и показываем контролы количества
-    const item = document.querySelector(`.menu-item .add-btn[onclick="addFirstItem('${itemName}', ${price})"]`).parentElement;
-    item.querySelector('.add-btn').classList.add('hidden');
-    item.querySelector('.quantity-controls').classList.add('visible');
+    const itemElement = document.querySelector(`.menu-item .add-btn[onclick="addFirstItem('${itemName}', ${price})"]`).parentElement;
+    const addBtn = itemElement.querySelector('.add-btn');
+    const quantityControls = itemElement.querySelector('.quantity-controls');
+    addBtn.classList.add('hidden');
+    quantityControls.style.display = 'flex';
 }
 
-function updateQuantity(itemName, change) {
+function updateQuantity(itemName, price, change) {
     if (!order[itemName]) {
-        order[itemName] = { quantity: 0, price: order[itemName]?.price || 0 };
+        order[itemName] = { quantity: 0, price: price };
     }
 
     order[itemName].quantity += change;
@@ -49,9 +51,9 @@ function updateQuantity(itemName, change) {
     if (order[itemName].quantity === 0) {
         delete order[itemName];
         // Возвращаем кнопку "+Lisää" и скрываем контролы количества
-        const item = document.querySelector(`#quantity-${itemName}`).parentElement.parentElement;
-        item.querySelector('.add-btn').classList.remove('hidden');
-        item.querySelector('.quantity-controls').classList.remove('visible');
+        const itemElement = document.querySelector(`#quantity-${itemName}`).parentElement.parentElement;
+        itemElement.querySelector('.add-btn').classList.remove('hidden');
+        itemElement.querySelector('.quantity-controls').style.display = 'none';
     }
 
     updateQuantityDisplay(itemName);
