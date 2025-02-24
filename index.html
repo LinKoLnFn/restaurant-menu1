@@ -11,8 +11,9 @@
         <h1>Menu</h1>
         <nav class="navbar">
             <ul>
-                <li><a href="#" class="tab-link active" data-category="alkuun">Alkuun</a></li>
+                <li><a href="#" class="tab-link" data-category="alkuun">Alkuun</a></li>
                 <li><a href="#" class="tab-link" data-category="combot">Combot</a></li>
+                <li><a href="#" class="tab-link" data-category="burgerit">Burgerit</a></li>
             </ul>
         </nav>
 
@@ -203,7 +204,7 @@
                 </div>
             </div>
 
-            <!-- Combot Menu (все блюда на основе фото) -->
+            <!-- Combot Menu (все блюда) -->
             <div class="menu-category" id="combot" style="display: none;">
                 <div class="menu-item">
                     <div class="item-header" onclick="toggleDescription(this)">
@@ -299,6 +300,106 @@
                 <div class="menu-item extra">
                     <p class="extra-options">Extra kana, halloumi tai pihvi 120g +6 €</p>
                     <p class="extra-options">Vaihtomaksu +2 €</p>
+                </div>
+            </div>
+
+            <!-- Burgerit Menu (все блюда на основе фото) -->
+            <div class="menu-category" id="burgerit" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Hottii Burgeri ★</span>
+                        <span class="item-price">20,60 €</span>
+                    </div>
+                    <p class="item-description">Hiiligrillissä valmistettu 120g naudan täyslihapihvili varustetut burgerit, joissa välissä hot-sipikastikkeet. Hampurilaisen täytteenä raikas salaatti, tomaatti, cheddarjuusto, marinoidut punasipulit, savumajoneesi. Tärke chili. Vierelleen vielä hot saa rapet ranskalaiset.</p>
+                    <button class="add-btn" onclick="addFirstItem('Hottii Burgeri ★', 20.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Hottii Burgeri ★" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Hottii Burgeri ★', 20.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Hottii Burgeri ★">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Hottii Burgeri ★', 20.60, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Raipen Burgeri ★</span>
+                        <span class="item-price">22,60 €</span>
+                    </div>
+                    <p class="item-description">Hiiligrillissä valmistettu 2 x 120g naudan täyslihapihvit, jotka ovat paahdettuja täysjyväbunsseja. Hampurilainen on ladattu raikkaalla salaattilla, tomaatilla, marinoidulla punasipulilla, cheddarjuustolla sekä savumajoneesilla. Burgerin kruunaa rapeat ranskalaiset.</p>
+                    <button class="add-btn" onclick="addFirstItem('Raipen Burgeri ★', 22.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Raipen Burgeri ★" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Raipen Burgeri ★', 22.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Raipen Burgeri ★">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Raipen Burgeri ★', 22.60, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Hook Burger ★</span>
+                        <span class="item-price">22,60 €</span>
+                    </div>
+                    <p class="item-description">Burgerit on mersu, 2x120g täyslihapivien Hook Burgeri Hiiligrillissä valmistettu hampurilainen, saa kaverikseen salaattia, tomaattia, marinoidut punasipulit, cheddarjuustoa, pekonia, BBQ-kastikkeen savumajoneesilla. Vierelle rapeat ranskalaiset.</p>
+                    <button class="add-btn" onclick="addFirstItem('Hook Burger ★', 22.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Hook Burger ★" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Hook Burger ★', 22.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Hook Burger ★">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Hook Burger ★', 22.60, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Cheeseburgeri ★</span>
+                        <span class="item-price">19,60 €</span>
+                    </div>
+                    <p class="item-description">Say Cheese!! Hiiligrillissä valmistettu 120g naudan täyslihapihvillä, salaattia, tomaattia, marinoidut punasipulit, cheddarjuustoa sekä savumajoneesilla. Tarjoillaan rapeiden ranskalsten kera.</p>
+                    <button class="add-btn" onclick="addFirstItem('Cheeseburgeri ★', 19.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Cheeseburgeri ★" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Cheeseburgeri ★', 19.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Cheeseburgeri ★">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Cheeseburgeri ★', 19.60, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Markkasen Kanaburgeri</span>
+                        <span class="item-price">20,60 €</span>
+                    </div>
+                    <p class="item-description">Mukhean upa ja maukas paneroidut kanaphihi, jotka on täydentäneet mangorajalla, cheddarjuustolla, salaattilla, tomaatilla sekä marinoidulla punasipulilla. Annoksen kruunaa rapeat ranskalaiset.</p>
+                    <button class="add-btn" onclick="addFirstItem('Markkasen Kanaburgeri', 20.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Markkasen Kanaburgeri" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Markkasen Kanaburgeri', 20.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Markkasen Kanaburgeri">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Markkasen Kanaburgeri', 20.60, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Halloumiburgeri (K)</span>
+                        <span class="item-price">20,60 €</span>
+                    </div>
+                    <p class="item-description">Tahan burgeriin hiiligrillissä grillattu halloum saa kaverikseen salaattia, tomaattia, ruccolaa, coleslawta, marinoidut punasipulat sekä chillimajoneesia. Annoksen kruunaa rapeat ranskalaiset.</p>
+                    <button class="add-btn" onclick="addFirstItem('Halloumiburgeri (K)', 20.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Halloumiburgeri (K)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Halloumiburgeri (K)', 20.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Halloumiburgeri (K)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Halloumiburgeri (K)', 20.60, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Kasvisburgeri (K) ★</span>
+                        <span class="item-price">20,60 €</span>
+                    </div>
+                    <p class="item-description">170g mehevällä tedylla kasvispihvillä varustettu hampurilainen, jossa raikkaalla salaattilla, tomaatilla, marinoidulla punasipulilla sekä savumajoneesilla. Burgerin kruunavat sipulirenkaat ja rapeat ranskalaiset. Saatavilla myös vegaanisena.</p>
+                    <button class="add-btn" onclick="addFirstItem('Kasvisburgeri (K) ★', 20.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Kasvisburgeri (K) ★" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Kasvisburgeri (K) ★', 20.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Kasvisburgeri (K) ★">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Kasvisburgeri (K) ★', 20.60, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item extra">
+                    <p class="extra-options">Saatavilla myös gluteenittomana +2€</p>
+                    <p class="extra-options">Annokset bataattiranskalaisilla +2€/kpl</p>
+                    <p class="extra-options">Coleslaw 3€/kpl</p>
                 </div>
             </div>
         </div>
