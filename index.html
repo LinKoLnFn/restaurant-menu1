@@ -14,6 +14,7 @@
                 <li><a href="#" class="tab-link" data-category="alkuun">Alkuun</a></li>
                 <li><a href="#" class="tab-link" data-category="combot">Combot</a></li>
                 <li><a href="#" class="tab-link" data-category="burgerit">Burgerit</a></li>
+                <li><a href="#" class="tab-link" data-category="siivet">Siivet (G/L)</a></li>
             </ul>
         </nav>
 
@@ -303,7 +304,7 @@
                 </div>
             </div>
 
-            <!-- Burgerit Menu (все блюда на основе фото) -->
+            <!-- Burgerit Menu (все блюда) -->
             <div class="menu-category" id="burgerit" style="display: none;">
                 <div class="menu-item">
                     <div class="item-header" onclick="toggleDescription(this)">
@@ -397,10 +398,104 @@
                     </div>
                 </div>
                 <div class="menu-item extra">
-                    <p class="extra-options">Pekoni, tuore chili,Aurajuusto tai gluteeniton sämpylä +2€/kpl</p>
-                    <p class="extra-options">Annos bataattiranskalaisilla +2€/kpl</p>
-                    <p class="extra-options">Coleslaw 3€/kpl</p>
                     <p class="extra-options">Saatavilla myös gluteenittomana +2€</p>
+                    <p class="extra-options">Annokset bataattiranskalaisilla +2€/kpl</p>
+                    <p class="extra-options">Coleslaw 3€/kpl</p>
+                </div>
+            </div>
+
+            <!-- Siivet (G/L) Menu (все блюда на основе фото) -->
+            <div class="menu-category" id="siivet" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Siipiannokset tarjoillaan valitsemallasi kastikkeella porkkanoin, sellerin sekä aurajuustodipin kera</span>
+                        <span class="item-price">10,30 €</span>
+                    </div>
+                    <p class="item-description">8 kpl</p>
+                    <button class="add-btn" onclick="addFirstItem('Siipiannokset 8 kpl (G/L)', 10.30)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Siipiannokset 8 kpl (G/L)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 8 kpl (G/L)', 10.30, -1)">-</button>
+                        <span class="quantity" id="quantity-Siipiannokset 8 kpl (G/L)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 8 kpl (G/L)', 10.30, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Siipiannokset tarjoillaan valitsemallasi kastikkeella porkkanoin, sellerin sekä aurajuustodipin kera</span>
+                        <span class="item-price">13,30 €</span>
+                    </div>
+                    <p class="item-description">12 kpl</p>
+                    <button class="add-btn" onclick="addFirstItem('Siipiannokset 12 kpl (G/L)', 13.30)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Siipiannokset 12 kpl (G/L)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 12 kpl (G/L)', 13.30, -1)">-</button>
+                        <span class="quantity" id="quantity-Siipiannokset 12 kpl (G/L)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 12 kpl (G/L)', 13.30, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Siipiannokset tarjoillaan valitsemallasi kastikkeella porkkanoin, sellerin sekä aurajuustodipin kera</span>
+                        <span class="item-price">17,60 €</span>
+                    </div>
+                    <p class="item-description">18 kpl</p>
+                    <button class="add-btn" onclick="addFirstItem('Siipiannokset 18 kpl (G/L)', 17.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Siipiannokset 18 kpl (G/L)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 18 kpl (G/L)', 17.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Siipiannokset 18 kpl (G/L)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 18 kpl (G/L)', 17.60, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Siipiannokset tarjoillaan valitsemallasi kastikkeella porkkanoin, sellerin sekä aurajuustodipin kera</span>
+                        <span class="item-price">22,80 €</span>
+                    </div>
+                    <p class="item-description">25 kpl</p>
+                    <button class="add-btn" onclick="addFirstItem('Siipiannokset 25 kpl (G/L)', 22.80)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Siipiannokset 25 kpl (G/L)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 25 kpl (G/L)', 22.80, -1)">-</button>
+                        <span class="quantity" id="quantity-Siipiannokset 25 kpl (G/L)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 25 kpl (G/L)', 22.80, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Siipiannokset tarjoillaan valitsemallasi kastikkeella porkkanoin, sellerin sekä aurajuustodipin kera</span>
+                        <span class="item-price">35,60 €</span>
+                    </div>
+                    <p class="item-description">40 kpl</p>
+                    <button class="add-btn" onclick="addFirstItem('Siipiannokset 40 kpl (G/L)', 35.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Siipiannokset 40 kpl (G/L)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 40 kpl (G/L)', 35.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Siipiannokset 40 kpl (G/L)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 40 kpl (G/L)', 35.60, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Siipiannokset tarjoillaan valitsemallasi kastikkeella porkkanoin, sellerin sekä aurajuustodipin kera</span>
+                        <span class="item-price">52,40 €</span>
+                    </div>
+                    <p class="item-description">60 kpl</p>
+                    <button class="add-btn" onclick="addFirstItem('Siipiannokset 60 kpl (G/L)', 52.40)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Siipiannokset 60 kpl (G/L)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 60 kpl (G/L)', 52.40, -1)">-</button>
+                        <span class="quantity" id="quantity-Siipiannokset 60 kpl (G/L)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 60 kpl (G/L)', 52.40, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Siipiannokset tarjoillaan valitsemallasi kastikkeella porkkanoin, sellerin sekä aurajuustodipin kera</span>
+                        <span class="item-price">83,40 €</span>
+                    </div>
+                    <p class="item-description">100 kpl</p>
+                    <button class="add-btn" onclick="addFirstItem('Siipiannokset 100 kpl (G/L)', 83.40)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Siipiannokset 100 kpl (G/L)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 100 kpl (G/L)', 83.40, -1)">-</button>
+                        <span class="quantity" id="quantity-Siipiannokset 100 kpl (G/L)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 100 kpl (G/L)', 83.40, 1)">+</button>
+                    </div>
                 </div>
             </div>
         </div>
