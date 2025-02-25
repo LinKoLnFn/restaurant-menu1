@@ -15,6 +15,7 @@
                 <li><a href="#" class="tab-link" data-category="combot">Combot</a></li>
                 <li><a href="#" class="tab-link" data-category="burgerit">Burgerit</a></li>
                 <li><a href="#" class="tab-link" data-category="siivet">Siivet (G/L)</a></li>
+                <li><a href="#" class="tab-link" data-category="vegesiivet">Vegesiivet (Ve)</a></li>
             </ul>
         </nav>
 
@@ -404,7 +405,7 @@
                 </div>
             </div>
 
-            <!-- Siivet (G/L) Menu (все блюда на основе фото) -->
+            <!-- Siivet (G/L) Menu (все блюда) -->
             <div class="menu-category" id="siivet" style="display: none;">
                 <div class="menu-item">
                     <div class="item-header" onclick="toggleDescription(this)">
@@ -495,6 +496,23 @@
                         <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 100 kpl (G/L)', 83.40, -1)">-</button>
                         <span class="quantity" id="quantity-Siipiannokset 100 kpl (G/L)">0</span>
                         <button class="quantity-btn" onclick="updateQuantity('Siipiannokset 100 kpl (G/L)', 83.40, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vegesiivet (Ve) Menu (на основе фото) -->
+            <div class="menu-category" id="vegesiivet" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Rapeat vegaaniiset poppersit tarjoillaan valitsemallasi sipikastikkeella sekä dipillä. Annoksen raikastaa porkkana- ja selleritikut</span>
+                        <span class="item-price">13,60 €</span>
+                    </div>
+                    <p class="item-description">12 kpl</p>
+                    <button class="add-btn" onclick="addFirstItem('Vegaaniiset poppersit 12 kpl (Ve)', 13.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Vegaaniiset poppersit 12 kpl (Ve)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Vegaaniiset poppersit 12 kpl (Ve)', 13.60, -1)">-</button>
+                        <span class="quantity" id="quantity-Vegaaniiset poppersit 12 kpl (Ve)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Vegaaniiset poppersit 12 kpl (Ve)', 13.60, 1)">+</button>
                     </div>
                 </div>
             </div>
