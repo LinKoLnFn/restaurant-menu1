@@ -18,6 +18,7 @@
                 <li><a href="#" class="tab-link" data-category="vegesiivet">Vegesiivet (Ve)</a></li>
                 <li><a href="#" class="tab-link" data-category="hfc-boneless">HFC Boneless (L)</a></li>
                 <li><a href="#" class="tab-link" data-category="ribsit">Ribsit (L)</a></li>
+                <li><a href="#" class="tab-link" data-category="nagamorich-siipi-haaste">Nagamorich Siipi-haaste</a></li>
             </ul>
         </nav>
 
@@ -536,7 +537,7 @@
                 </div>
             </div>
 
-            <!-- Ribsit (L) Menu (на основе фото) -->
+            <!-- Ribsit (L) Menu (все блюда) -->
             <div class="menu-category" id="ribsit" style="display: none;">
                 <div class="menu-item">
                     <div class="item-header" onclick="toggleDescription(this)">
@@ -562,6 +563,23 @@
                         <button class="quantity-btn" onclick="updateQuantity('Ribsit (L) Puolikas', 19.80, -1)">-</button>
                         <span class="quantity" id="quantity-Ribsit (L) Puolikas">0</span>
                         <button class="quantity-btn" onclick="updateQuantity('Ribsit (L) Puolikas', 19.80, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Nagamorich Siipi-haaste Menu (предположительное блюдо) -->
+            <div class="menu-category" id="nagamorich-siipi-haaste" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Nagamorich Siipi-haaste</span>
+                        <span class="item-price">45,00 €</span>
+                    </div>
+                    <p class="item-description">Haastava annos 50 tulisista kanansiivistä hiiligrillistä, tarjoiltu valitsemallasi kastikkeella, porkkanoin, sellerin sekä aurajuustodipin kera. Vain rohkeimmille!</p>
+                    <button class="add-btn" onclick="addFirstItem('Nagamorich Siipi-haaste 50 kpl', 45.00)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Nagamorich Siipi-haaste 50 kpl" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Nagamorich Siipi-haaste 50 kpl', 45.00, -1)">-</button>
+                        <span class="quantity" id="quantity-Nagamorich Siipi-haaste 50 kpl">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Nagamorich Siipi-haaste 50 kpl', 45.00, 1)">+</button>
                     </div>
                 </div>
             </div>
