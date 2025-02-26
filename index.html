@@ -16,6 +16,7 @@
                 <li><a href="#" class="tab-link" data-category="burgerit">Burgerit</a></li>
                 <li><a href="#" class="tab-link" data-category="siivet">Siivet (G/L)</a></li>
                 <li><a href="#" class="tab-link" data-category="vegesiivet">Vegesiivet (Ve)</a></li>
+                <li><a href="#" class="tab-link" data-category="hfc-boneless">HFC Boneless (L)</a></li>
             </ul>
         </nav>
 
@@ -500,7 +501,7 @@
                 </div>
             </div>
 
-            <!-- Vegesiivet (Ve) Menu (на основе фото) -->
+            <!-- Vegesiivet (Ve) Menu (все блюда) -->
             <div class="menu-category" id="vegesiivet" style="display: none;">
                 <div class="menu-item">
                     <div class="item-header" onclick="toggleDescription(this)">
@@ -513,6 +514,23 @@
                         <button class="quantity-btn" onclick="updateQuantity('Vegaaniiset poppersit 12 kpl (Ve)', 13.60, -1)">-</button>
                         <span class="quantity" id="quantity-Vegaaniiset poppersit 12 kpl (Ve)">0</span>
                         <button class="quantity-btn" onclick="updateQuantity('Vegaaniiset poppersit 12 kpl (Ve)', 13.60, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- HFC Boneless (L) Menu (на основе фото) -->
+            <div class="menu-category" id="hfc-boneless" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Rapeat luuttomat kanansiivett tarjoillaan valitsemallasi kastikkeella porkkanoiden,sellerin sekä aurajuustodipin kera.</span>
+                        <span class="item-price">14,60 €</span>
+                    </div>
+                    <p class="item-description">N. 400g</p>
+                    <button class="add-btn" onclick="addFirstItem('HFC Boneless (L) 400g', 14.60)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-HFC Boneless (L) 400g" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('HFC Boneless (L) 400g', 14.60, -1)">-</button>
+                        <span class="quantity" id="quantity-HFC Boneless (L) 400g">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('HFC Boneless (L) 400g', 14.60, 1)">+</button>
                     </div>
                 </div>
             </div>
