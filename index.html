@@ -19,6 +19,7 @@
                 <li><a href="#" class="tab-link" data-category="hfc-boneless">HFC Boneless (L)</a></li>
                 <li><a href="#" class="tab-link" data-category="ribsit">Ribsit (L)</a></li>
                 <li><a href="#" class="tab-link" data-category="nagamorich-siipi-haaste">Nagamorich Siipi-haaste (G/L)</a></li>
+                <li><a href="#" class="tab-link" data-category="lasten-menu">Lasten Menu (alle 12v)</a></li>
             </ul>
         </nav>
 
@@ -567,7 +568,7 @@
                 </div>
             </div>
 
-            <!-- Nagamorich Siipi-haaste (G/L) Menu (на основе фото) -->
+            <!-- Nagamorich Siipi-haaste (G/L) Menu (все блюда) -->
             <div class="menu-category" id="nagamorich-siipi-haaste" style="display: none;">
                 <div class="menu-item">
                     <div class="item-header" onclick="toggleDescription(this)">
@@ -580,6 +581,62 @@
                         <button class="quantity-btn" onclick="updateQuantity('Nagamorich Siipi-haaste (G/L)', 21.90, -1)">-</button>
                         <span class="quantity" id="quantity-Nagamorich Siipi-haaste (G/L)">0</span>
                         <button class="quantity-btn" onclick="updateQuantity('Nagamorich Siipi-haaste (G/L)', 21.90, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lasten Menu (alle 12v) Menu (на основе фото) -->
+            <div class="menu-category" id="lasten-menu" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Hookin Lihapullat (G/L) ★</span>
+                        <span class="item-price">11,20 €</span>
+                    </div>
+                    <p class="item-description">Herkullisia lihapullia hiiligrillissä valmistettuna, kierreperunoita sekä vihanneksia.</p>
+                    <button class="add-btn" onclick="addFirstItem('Hookin Lihapullat (G/L) ★', 11.20)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Hookin Lihapullat (G/L) ★" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Hookin Lihapullat (G/L) ★', 11.20, -1)">-</button>
+                        <span class="quantity" id="quantity-Hookin Lihapullat (G/L) ★">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Hookin Lihapullat (G/L) ★', 11.20, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Hookin Kanaa (G/L)</span>
+                        <span class="item-price">11,20 €</span>
+                    </div>
+                    <p class="item-description">Rapeaa luttomat broilerin sisäfileet, kierreperunoita sekä vihanneksia.</p>
+                    <button class="add-btn" onclick="addFirstItem('Hookin Kanaa (G/L)', 11.20)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Hookin Kanaa (G/L)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Hookin Kanaa (G/L)', 11.20, -1)">-</button>
+                        <span class="quantity" id="quantity-Hookin Kanaa (G/L)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Hookin Kanaa (G/L)', 11.20, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Lasten Burgeri ★</span>
+                        <span class="item-price">11,20 €</span>
+                    </div>
+                    <p class="item-description">Suussa sulava hiiligrillillä valmistettu 120g naudan täyslihapihvi, cheddarjuustoa, ketšuppi sekä ranskalaisia. (Saatavilla myös gluteenittomana +2 €)</p>
+                    <button class="add-btn" onclick="addFirstItem('Lasten Burgeri ★', 11.20)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Lasten Burgeri ★" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Lasten Burgeri ★', 11.20, -1)">-</button>
+                        <span class="quantity" id="quantity-Lasten Burgeri ★">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Lasten Burgeri ★', 11.20, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Lasten Siivet (G/L)</span>
+                        <span class="item-price">11,20 €</span>
+                    </div>
+                    <p class="item-description">5 kpl siipiä ja rapeat ranskalaiset tarjollaan valitsemallasi sipikastikkeella. Annoksen kruunaa auradippi sekä raikasta porkkana- ja kurkkutikut.</p>
+                    <button class="add-btn" onclick="addFirstItem('Lasten Siivet (G/L)', 11.20)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Lasten Siivet (G/L)" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Lasten Siivet (G/L)', 11.20, -1)">-</button>
+                        <span class="quantity" id="quantity-Lasten Siivet (G/L)">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Lasten Siivet (G/L)', 11.20, 1)">+</button>
                     </div>
                 </div>
             </div>
