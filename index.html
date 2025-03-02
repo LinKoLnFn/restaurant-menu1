@@ -20,6 +20,7 @@
                 <li><a href="#" class="tab-link" data-category="ribsit">Ribsit (L)</a></li>
                 <li><a href="#" class="tab-link" data-category="nagamorich-siipi-haaste">Nagamorich Siipi-haaste (G/L)</a></li>
                 <li><a href="#" class="tab-link" data-category="lasten-menu">Lasten Menu (alle 12v)</a></li>
+                <li><a href="#" class="tab-link" data-category="hanatuotteet">Hanatuotteet</a></li>
             </ul>
         </nav>
 
@@ -637,6 +638,140 @@
                         <button class="quantity-btn" onclick="updateQuantity('Lasten Siivet (G/L)', 11.20, -1)">-</button>
                         <span class="quantity" id="quantity-Lasten Siivet (G/L)">0</span>
                         <button class="quantity-btn" onclick="updateQuantity('Lasten Siivet (G/L)', 11.20, 1)">+</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hanatuotteet Menu (напитки) -->
+            <div class="menu-category" id="hanatuotteet" style="display: none;">
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Aura 4,5%</span>
+                        <span class="item-price">6,40 €</span>
+                    </div>
+                    <p class="item-description">0,33 l</p>
+                    <button class="add-btn" onclick="addFirstItem('Aura 4,5%', 6.40)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Aura 4,5%" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Aura 4,5%', 6.40, -1)">-</button>
+                        <span class="quantity" id="quantity-Aura 4,5%">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Aura 4,5%', 6.40, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Kannu 1,5 l</span>
+                        <span class="item-price">7,90 €</span>
+                    </div>
+                    <p class="item-description">0,5 l</p>
+                    <button class="add-btn" onclick="addFirstItem('Kannu 1,5 l', 7.90)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Kannu 1,5 l" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Kannu 1,5 l', 7.90, -1)">-</button>
+                        <span class="quantity" id="quantity-Kannu 1,5 l">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Kannu 1,5 l', 7.90, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Torni 3 l</span>
+                        <span class="item-price">22,00 €</span>
+                    </div>
+                    <p class="item-description">Tomi 5 l</p>
+                    <button class="add-btn" onclick="addFirstItem('Torni 3 l', 22.00)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Torni 3 l" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Torni 3 l', 22.00, -1)">-</button>
+                        <span class="quantity" id="quantity-Torni 3 l">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Torni 3 l', 22.00, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Tomi 5 l</span>
+                        <span class="item-price">40,00 €</span>
+                    </div>
+                    <p class="item-description"></p>
+                    <button class="add-btn" onclick="addFirstItem('Tomi 5 l', 40.00)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Tomi 5 l" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Tomi 5 l', 40.00, -1)">-</button>
+                        <span class="quantity" id="quantity-Tomi 5 l">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Tomi 5 l', 40.00, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">San Miguel 4,5%</span>
+                        <span class="item-price">7,20 €</span>
+                    </div>
+                    <p class="item-description">0,33 l</p>
+                    <button class="add-btn" onclick="addFirstItem('San Miguel 4,5%', 7.20)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-San Miguel 4,5%" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('San Miguel 4,5%', 7.20, -1)">-</button>
+                        <span class="quantity" id="quantity-San Miguel 4,5%">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('San Miguel 4,5%', 7.20, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Kannu 1,5 l</span>
+                        <span class="item-price">8,90 €</span>
+                    </div>
+                    <p class="item-description">0,5 l</p>
+                    <button class="add-btn" onclick="addFirstItem('Kannu 1,5 l', 8.90)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Kannu 1,5 l" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Kannu 1,5 l', 8.90, -1)">-</button>
+                        <span class="quantity" id="quantity-Kannu 1,5 l">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Kannu 1,5 l', 8.90, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Tomi 3 l</span>
+                        <span class="item-price">25,00 €</span>
+                    </div>
+                    <p class="item-description">Tomi 5 l</p>
+                    <button class="add-btn" onclick="addFirstItem('Tomi 3 l', 25.00)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Tomi 3 l" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Tomi 3 l', 25.00, -1)">-</button>
+                        <span class="quantity" id="quantity-Tomi 3 l">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Tomi 3 l', 25.00, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Tomi 5 l</span>
+                        <span class="item-price">47,00 €</span>
+                    </div>
+                    <p class="item-description"></p>
+                    <button class="add-btn" onclick="addFirstItem('Tomi 5 l', 47.00)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Tomi 5 l" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Tomi 5 l', 47.00, -1)">-</button>
+                        <span class="quantity" id="quantity-Tomi 5 l">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Tomi 5 l', 47.00, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">Guinness 4,2%</span>
+                        <span class="item-price">7,20 €</span>
+                    </div>
+                    <p class="item-description">0,33 l</p>
+                    <button class="add-btn" onclick="addFirstItem('Guinness 4,2%', 7.20)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-Guinness 4,2%" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('Guinness 4,2%', 7.20, -1)">-</button>
+                        <span class="quantity" id="quantity-Guinness 4,2%">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('Guinness 4,2%', 7.20, 1)">+</button>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header" onclick="toggleDescription(this)">
+                        <span class="item-name">0,5 l</span>
+                        <span class="item-price">9,10 €</span>
+                    </div>
+                    <p class="item-description">Lonkerо 5,5%</p>
+                    <button class="add-btn" onclick="addFirstItem('0,5 l', 9.10)">+Lisää</button>
+                    <div class="quantity-controls" id="quantity-controls-0,5 l" style="display: none;">
+                        <button class="quantity-btn" onclick="updateQuantity('0,5 l', 9.10, -1)">-</button>
+                        <span class="quantity" id="quantity-0,5 l">0</span>
+                        <button class="quantity-btn" onclick="updateQuantity('0,5 l', 9.10, 1)">+</button>
                     </div>
                 </div>
             </div>
