@@ -6,7 +6,11 @@ document.querySelectorAll(".tab-link").forEach(tab => {
         this.classList.add("active");
 
         document.querySelectorAll(".menu-category").forEach(menu => menu.style.display = "none");
-        document.getElementById(this.dataset.category).style.display = "block";
+        const activeCategory = document.getElementById(this.dataset.category);
+        activeCategory.style.display = "block";
+
+        // Прокручиваем страницу к началу активной категории
+        activeCategory.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
 });
 
@@ -118,7 +122,7 @@ document.getElementById('submit-order').addEventListener('click', () => {
         timestamp: new Date().toISOString()
     };
 
-    console.log('Lähetetty tilaus:', orderDetails); // Для теста
+    console.log('Lähetetty tilaus:', orderDetails);
     alert(`Tilaus lähetetty pöytään ${tableNumber}!`);
     document.getElementById('order-modal').style.display = 'none';
     order = {};
