@@ -21,36 +21,40 @@ function toggleDescription(element) {
 }
 
 function addFirstItem(itemName, price) {
-    if (!order[itemName]) {
-        order[itemName] = { quantity: 0, price: price };
+    const dipSelect = document.getElementById(`dip-${itemName}`);
+    const dip = dipSelect ? dipSelect.value : null;
+    const fullItemName = dip ? `${itemName} (${dip})` : itemName;
+
+    if (!order[fullItemName]) {
+        order[fullItemName] = { quantity: 0, price: price };
     }
 
-    order[itemName].quantity = 1; // Устанавливаем количество 1 при первом добавлении
+    order[fullItemName].quantity = 1;
     updateQuantityDisplay(itemName);
     updateCart();
 
-    // Скрываем кнопку "+Lisää" и показываем контролы количества
     const itemElement = document.querySelector(`.menu-item .add-btn[onclick="addFirstItem('${itemName}', ${price})"]`).parentElement;
-    const addBtn = itemElement.querySelector('.add-btn');
-    const quantityControls = itemElement.querySelector('.quantity-controls');
-    addBtn.classList.add('hidden');
-    quantityControls.style.display = 'flex';
+    itemElement.querySelector('.add-btn').classList.add('hidden');
+    itemElement.querySelector('.quantity-controls').style.display = 'flex';
 }
 
 function updateQuantity(itemName, price, change) {
-    if (!order[itemName]) {
-        order[itemName] = { quantity: 0, price: price };
+    const dipSelect = document.getElementById(`dip-${itemName}`);
+    const dip = dipSelect ? dipSelect.value : null;
+    const fullItemName = dip ? `${itemName} (${dip})` : itemName;
+
+    if (!order[fullItemName]) {
+        order[fullItemName] = { quantity: 0, price: price };
     }
 
-    order[itemName].quantity += change;
+    order[fullItemName].quantity += change;
 
-    if (order[itemName].quantity < 1) {
-        order[itemName].quantity = 0;
+    if (order[fullItemName].quantity < 1) {
+        order[fullItemName].quantity = 0;
     }
 
-    if (order[itemName].quantity === 0) {
-        delete order[itemName];
-        // Возвращаем кнопку "+Lisää" и скрываем контролы количества
+    if (order[fullItemName].quantity === 0) {
+        delete order[fullItemName];
         const itemElement = document.querySelector(`#quantity-${itemName}`).parentElement.parentElement;
         itemElement.querySelector('.add-btn').classList.remove('hidden');
         itemElement.querySelector('.quantity-controls').style.display = 'none';
@@ -63,7 +67,10 @@ function updateQuantity(itemName, price, change) {
 function updateQuantityDisplay(itemName) {
     const quantityElement = document.getElementById(`quantity-${itemName}`);
     if (quantityElement) {
-        quantityElement.textContent = order[itemName]?.quantity || 0;
+        const dipSelect = document.getElementById(`dip-${itemName}`);
+        const dip = dipSelect ? dipSelect.value : null;
+        const fullItemName = dip ? `${itemName} (${dip})` : itemName;
+        quantityElement.textContent = order[fullItemName]?.quantity || 0;
     }
 }
 
@@ -97,7 +104,29 @@ document.getElementById('close-modal').addEventListener('click', () => {
     document.getElementById('order-modal').style.display = 'none';
 });
 
-// Закрытие модального окна при клике вне его
+document.getElementById('submit-order').addEventListener('click', () => {
+    const tableNumber = document.getElementById('table-number').value;
+    if (!tableNumber) {
+        alert('Syötä pöydän numero!');
+        return;
+    }
+
+    const orderDetails = {
+        table: tableNumber,
+        items: order,
+        total: Object.values(order).reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2),
+        timestamp: new Date().toISOString()
+    };
+
+    console.log('Lähetetty tilaus:', orderDetails); // Для теста
+    alert(`Tilaus lähetetty pöytään ${tableNumber}!`);
+    document.getElementById('order-modal').style.display = 'none';
+    order = {};
+    updateCart();
+    document.querySelectorAll('.quantity-controls').forEach(control => control.style.display = 'none');
+    document.querySelectorAll('.add-btn').forEach(btn => btn.classList.remove('hidden'));
+});
+
 window.addEventListener('click', (event) => {
     const modal = document.getElementById('order-modal');
     if (event.target === modal) {
