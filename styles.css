@@ -25,6 +25,9 @@ h1 {
     text-align: center;
     margin-bottom: 30px;
     border-radius: 5px;
+    position: sticky; /* Закрепляем навигацию вверху */
+    top: 0; /* Фиксируем вверху страницы */
+    z-index: 1000; /* Убедимся, что навигация выше других элементов */
 }
 
 .navbar ul {
@@ -59,6 +62,7 @@ h1 {
 
 .menu-category {
     padding: 20px;
+    margin-top: 20px; /* Добавляем отступ сверху, чтобы контент не перекрывался */
 }
 
 .menu-item {
