@@ -6,11 +6,7 @@ document.querySelectorAll(".tab-link").forEach(tab => {
         this.classList.add("active");
 
         document.querySelectorAll(".menu-category").forEach(menu => menu.style.display = "none");
-        const activeCategory = document.getElementById(this.dataset.category);
-        activeCategory.style.display = "block";
-
-        // Прокручиваем страницу к началу активной категории
-        activeCategory.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        document.getElementById(this.dataset.category).style.display = "block";
     });
 });
 
@@ -25,40 +21,36 @@ function toggleDescription(element) {
 }
 
 function addFirstItem(itemName, price) {
-    const dipSelect = document.getElementById(`dip-${itemName}`);
-    const dip = dipSelect ? dipSelect.value : null;
-    const fullItemName = dip ? `${itemName} (${dip})` : itemName;
-
-    if (!order[fullItemName]) {
-        order[fullItemName] = { quantity: 0, price: price };
+    if (!order[itemName]) {
+        order[itemName] = { quantity: 0, price: price };
     }
 
-    order[fullItemName].quantity = 1;
+    order[itemName].quantity = 1; // Устанавливаем количество 1 при первом добавлении
     updateQuantityDisplay(itemName);
     updateCart();
 
+    // Скрываем кнопку "+Lisää" и показываем контролы количества
     const itemElement = document.querySelector(`.menu-item .add-btn[onclick="addFirstItem('${itemName}', ${price})"]`).parentElement;
-    itemElement.querySelector('.add-btn').classList.add('hidden');
-    itemElement.querySelector('.quantity-controls').style.display = 'flex';
+    const addBtn = itemElement.querySelector('.add-btn');
+    const quantityControls = itemElement.querySelector('.quantity-controls');
+    addBtn.classList.add('hidden');
+    quantityControls.style.display = 'flex';
 }
 
 function updateQuantity(itemName, price, change) {
-    const dipSelect = document.getElementById(`dip-${itemName}`);
-    const dip = dipSelect ? dipSelect.value : null;
-    const fullItemName = dip ? `${itemName} (${dip})` : itemName;
-
-    if (!order[fullItemName]) {
-        order[fullItemName] = { quantity: 0, price: price };
+    if (!order[itemName]) {
+        order[itemName] = { quantity: 0, price: price };
     }
 
-    order[fullItemName].quantity += change;
+    order[itemName].quantity += change;
 
-    if (order[fullItemName].quantity < 1) {
-        order[fullItemName].quantity = 0;
+    if (order[itemName].quantity < 1) {
+        order[itemName].quantity = 0;
     }
 
-    if (order[fullItemName].quantity === 0) {
-        delete order[fullItemName];
+    if (order[itemName].quantity === 0) {
+        delete order[itemName];
+        // Возвращаем кнопку "+Lisää" и скрываем контролы количества
         const itemElement = document.querySelector(`#quantity-${itemName}`).parentElement.parentElement;
         itemElement.querySelector('.add-btn').classList.remove('hidden');
         itemElement.querySelector('.quantity-controls').style.display = 'none';
@@ -71,10 +63,7 @@ function updateQuantity(itemName, price, change) {
 function updateQuantityDisplay(itemName) {
     const quantityElement = document.getElementById(`quantity-${itemName}`);
     if (quantityElement) {
-        const dipSelect = document.getElementById(`dip-${itemName}`);
-        const dip = dipSelect ? dipSelect.value : null;
-        const fullItemName = dip ? `${itemName} (${dip})` : itemName;
-        quantityElement.textContent = order[fullItemName]?.quantity || 0;
+        quantityElement.textContent = order[itemName]?.quantity || 0;
     }
 }
 
@@ -108,29 +97,7 @@ document.getElementById('close-modal').addEventListener('click', () => {
     document.getElementById('order-modal').style.display = 'none';
 });
 
-document.getElementById('submit-order').addEventListener('click', () => {
-    const tableNumber = document.getElementById('table-number').value;
-    if (!tableNumber) {
-        alert('Syötä pöydän numero!');
-        return;
-    }
-
-    const orderDetails = {
-        table: tableNumber,
-        items: order,
-        total: Object.values(order).reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2),
-        timestamp: new Date().toISOString()
-    };
-
-    console.log('Lähetetty tilaus:', orderDetails);
-    alert(`Tilaus lähetetty pöytään ${tableNumber}!`);
-    document.getElementById('order-modal').style.display = 'none';
-    order = {};
-    updateCart();
-    document.querySelectorAll('.quantity-controls').forEach(control => control.style.display = 'none');
-    document.querySelectorAll('.add-btn').forEach(btn => btn.classList.remove('hidden'));
-});
-
+// Закрытие модального окна при клике вне его
 window.addEventListener('click', (event) => {
     const modal = document.getElementById('order-modal');
     if (event.target === modal) {
